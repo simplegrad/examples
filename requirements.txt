@@ -1,0 +1,5 @@
+simplegrad[gpu,visual] @ git+https://github.com/simplegrad/simplegrad.git
+# simplegrad[gpu,visual] @ git+https://github.com/simplegrad/simplegrad.git
+tqdm
+ipykernel
+# juputerlab
