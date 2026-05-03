@@ -14,6 +14,11 @@ Maximize `sg` usage — keep everything else minimal.
 - Prefer the standard library and numpy over third-party packages.
 - If a third-party package is needed, use the simplest one that does the job.
 
+### Dependencies
+Allowed third-party packages beyond `simplegrad` and `numpy`:
+- `tqdm` — wrap the epoch loop with `tqdm(range(NUM_EPOCHS), desc="training")`
+- `matplotlib` — sanity checks and inline plots only
+
 ### numpy → sg.Tensor handoff
 Use numpy only for I/O and dataset-level preprocessing (reading files, splitting, one-hot encoding).
 Convert to `sg.Tensor` at the earliest point where the data enters the model pipeline.
@@ -33,7 +38,7 @@ Only where the logic is non-obvious. Do not narrate what the code already says.
 ## Notebook cell order
 
 1. Imports
-2. Config — all hyperparameters and paths as `ALL_CAPS` variables
+2. Config — hyperparameters as `ALL_CAPS`, paths as `lowercase`
 3. Dataset download — commented-out shell commands
 4. Data loading — numpy/PIL, print shapes
 5. Sanity check — visualize one sample
